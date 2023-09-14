@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600;700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -14,16 +16,36 @@
 }
 
 .header {
-    background-color: lightslategray;
+    background-color: rgb(209, 232, 255);
     grid-area: header;
 }
 
 .sidebar {
-    background-color: blueviolet;
+    background-color: rgb(15, 144, 173);
     grid-area: sidebar;
+    font-family: 'Raleway', sans-serif;
+    color: rgb(244, 252, 255);
+    display: grid;
+    grid-template-rows: 1fr 1fr 2fr;
+    padding-left: 20px;
+    padding-top: 20px;
+}
+
+.sidebar-container-1,
+.sidebar-container-2 {
+    display: grid;
+    grid-auto-flow: row;
+    justify-content: start;
+    gap: 20px;
+}
+
+.sidebar-container-1 a,
+.sidebar-container-2 a {
+    color: rgb(220, 248, 255);
+    text-decoration: none;
 }
 
 .main-content {
-    background-color: blanchedalmond;
+    background-color: rgb(124, 174, 192);
     grid-area: main-content;
 }
