@@ -19,11 +19,15 @@
 .sidebar {
     background-color: rgb(15, 144, 173);
     grid-area: sidebar;
-    color: rgb(244, 252, 255);
+    color: rgb(255, 255, 255);
     display: grid;
     grid-template-rows: 50px 1fr 2fr;
     padding-left: 20px;
     padding-top: 20px;
+}
+.sidebar-container-1 {
+    grid-template-columns: 10px auto;
+    grid-auto-flow: column;
 }
 
 .sidebar-container-1,
@@ -36,19 +40,22 @@
 
 .sidebar-container-1 a,
 .sidebar-container-2 a {
-    color: rgb(220, 248, 255);
+    color: rgb(255, 255, 255);
     text-decoration: none;
     font-weight: 600;
 }
 
-button > svg {
-    width: 15px;
-    height: 15px;
+.sidebar-row {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: left;
+    gap: 15px;
 }
 
-.icon-button {
-border-style: none;
-background: none;
+.sidebar-row > svg {
+    width: 20px;
+    height: 20px;
+    color: white;
 }
 
 .avatar-smaller {
@@ -64,6 +71,7 @@ background: none;
 .dashboard-link {
     font-weight: 700;
     font-size: larger;
+    padding-left: 10px;
 }
 
 .header {
@@ -71,56 +79,87 @@ background: none;
     grid-area: header;
     display: grid;
     box-shadow: 0 8px 6px -6px black;
-
+    padding-left: 25px;
+    padding-bottom: 10px;
 }
 
 .header-bar-1 {
     display: grid;
     grid-auto-flow: column;
+    grid-template-columns: minmax(40px, .25fr) 7fr minmax(50px, .5fr) minmax(40px, .5fr) minmax(150px, 1fr);
+    align-items: center;
+    justify-items: center;
     padding-left: 30px;
     padding-right: 30px;
     font-weight: 600;
+    padding: 10px;
+}
 
+.header-bar-1 > svg {
+    width: 20px;
+    height: 20px;
 }
 
 .header-bar-2 {
     display: grid;
     grid-auto-flow: column; 
+    align-items: center;
+    justify-content: space-between;
     font-weight: 600;
+    padding: 10px;
+    padding-right: 30px;
+}
+
+.second-header-greeting {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 50px auto;
+    gap: 15px;
+    align-items: center;
 }
 
 input {
     border-style: none;
     border-radius: 15px;
     height: 20px;
-    background-color: rgb(239, 239, 239);
+    background-color: rgb(206, 225, 235);
+    width: 400px;
+    justify-self: left;
 }
 
 .blue-buttons > button {
-    color: rgb(220, 248, 255);
+    color: rgb(255, 255, 255);
     border-style: none;
     border-radius: 15px;
     background-color: rgb(15, 144, 173);
     padding: 5px;
-    width: 75px;
+    width: 90px;
+    font-weight: 600;
+
+}
+
+.blue-buttons {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 20px;
 }
 
 .main-content {
-    background-color: rgb(233, 244, 255);
+    background-color: rgba(234, 234, 234, 0.766);
     grid-area: main-content;
     display: grid;
     grid-auto-flow: column;
     grid-template-columns: 2.75fr 1fr;
     gap: 15px;
-    
+    padding-bottom: 40px;
 }
 
 .main-content-1,
 .main-content-2 {
     display: grid;
     grid-template-rows: 50px 5fr;
-    
 }
+
 
 .section-subtitle-1 {
     padding-left: 15px;
@@ -131,6 +170,25 @@ input {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 15px;
     padding-left: 15px;
+    padding-bottom: 15px;
+}
+
+.card {
+    display: grid;
+    border-left: 5px solid rgb(232, 196, 87);
+}
+
+.card-icon-container {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: end;
+    align-items: end;
+    gap: 25px;
+}
+
+.card-icon-container > svg {
+    height: 20px;
+    width: 20px;
 }
 
 .card,
@@ -138,6 +196,8 @@ input {
     background-color: rgb(255, 255, 255);
     padding: 15px;
     border-radius: 8px;
+    box-shadow: 3px 5px 6px -6px grey;
+
 }
 
 .title,
@@ -148,17 +208,48 @@ input {
     font-weight: 600;
 }
 
+.content-label-1,
+.content-label-2 {
+    align-self: end;
+    padding-bottom: 10px;
+}
+
 .card-container-2 {
     display: grid;
     gap: 15px;
     grid-template-columns: 1fr;
-
+    padding-bottom: 15px;
+    padding-right: 15px;
 }
 .side-card {
     font-size: smaller;
 }
 
+
 .side-card-2 {
     display: grid;
     grid-auto-flow: row;
+    justify-content: start;
+    gap: 20px;
+}
+
+.side-card-2-row {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 1fr 5fr;
+    gap: 15px;
+}
+
+.icon-button {
+    border-style: none;
+    background: none;
+    color:black;
+    }
+
+.body-text {
+    color: rgb(125, 125, 125);
+}
+
+hr {
+    border-width: 0.5px;
 }
